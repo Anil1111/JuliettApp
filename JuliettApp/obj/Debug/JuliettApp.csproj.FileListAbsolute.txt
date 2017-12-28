@@ -1,0 +1,11 @@
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\obj\Debug\JuliettApp.csprojResolveAssemblyReference.cache
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\obj\Debug\JuliettApp.csproj.CoreCompileInputs.cache
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\bin\Debug\JuliettApp.exe.config
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\bin\Debug\JuliettApp.exe
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\bin\Debug\JuliettApp.pdb
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\obj\Debug\JuliettApp.exe
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\obj\Debug\JuliettApp.pdb
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\bin\Debug\JuliettApp.exe.manifest
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\bin\Debug\JuliettApp.application
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\obj\Debug\JuliettApp.exe.manifest
+C:\Users\puszy\OneDrive\Dokumenty\C#\JuliettApp\JuliettApp\obj\Debug\JuliettApp.application
