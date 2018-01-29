@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="JuliettApp.exe" size="10720">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="JuliettApp.exe" size="11232">
       <assemblyIdentity name="JuliettApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uYpUjOofpBUdSwAjb4sThdYt3/B9wHFxY2zR2sgcttY=</dsig:DigestValue>
+        <dsig:DigestValue>FpLxOZdkUESm6iCXAoa8XE5x9ltwLY9sNr+CHRj3OeA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

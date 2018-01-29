@@ -9,15 +9,9 @@ using System.Threading;
 
 
 namespace JuliettApp
-{
-
-    
-
+{ 
     class Program
-    {
-        
-        
-        
+    {   
         static void Main(string[] args)
         {
             Console.WriteLine();
@@ -26,88 +20,77 @@ namespace JuliettApp
             Contact hello = new Contact();
             hello.Welcome(); Console.WriteLine();
 
+            //displaying menu
             Menu();            
         }
 
 
+        static int _numberOfCycles;
+        static char _switchNumber;
 
-        
-
-
-        //displaying a menu and its funcionality
+        //displaying a menu + its funcionality
         public static void Menu()
         {
             MainMenu:
             Console.WriteLine("  ------------------------------------------ ");
             Console.WriteLine(" |  MAIN MENU                               |");
             Console.WriteLine(" | ------------------------------------     |");
-            Console.WriteLine(" | 1. Open websites (exercises + music)     |");
-            Console.WriteLine(" | 2. Nine intervals 30-10s                 |");
-            Console.WriteLine(" | 3. 45 intervals 30-10s                   |");
-            Console.WriteLine(" | 4. Choose own number of intervals 30-10s |");
+            Console.WriteLine(" | 1. Open exercises website                |");
+            Console.WriteLine(" | 2. Open random music website             |");
+            Console.WriteLine(" | 3. Nine intervals 30-10s                 |");
+            Console.WriteLine(" | 4. 45 intervals 30-10s                   |");
+            Console.WriteLine(" | 5. Choose own number of intervals 30-10s |");
             Console.WriteLine(" | ------------------------------------     |");
-            Console.WriteLine(" | 5. Credits                               |");
-            Console.WriteLine(" | 6. Exit program                          |");
+            Console.WriteLine(" | 6. Credits                               |");
+            Console.WriteLine(" | 7. Exit program                          |");
             Console.WriteLine("  ------------------------------------------ ");
 
-            int numberOfCycles;
-            char switchNumber;
-            //No enter needed
-            switchNumber = Console.ReadKey().KeyChar; 
+            
+            //Read Char for no enter switch menu
+            _switchNumber = Console.ReadKey().KeyChar; 
 
-            //creating new object
+            //creating new object to use class methods
             Exercises basicIntervals = new Exercises();
 
             //switch menu
-            switch (switchNumber)
+            switch (_switchNumber)
             {
                 case '1':
-                    OpenWebsite("https://www.youtube.com/watch?v=3inY0h526cI&t=2s");
-                    //creating new object to use method from Contact class - sending random yt link from lists
-                        //Contact link = new Contact();                   
-                        //OpenWebsite(link.MusicLinks());
+                    OpenWebSite("https://www.youtube.com/watch?v=3inY0h526cI&t=2s");                    
                     Console.Clear();
                     goto MainMenu;
                 case '2':
-                    //Console.Clear();
-                    //basicIntervals.GetReady();
+                    //creating new object to use method from Contact class - sending random yt link from lists
+                    Contact link = new Contact();
+                    OpenWebSite(link.MusicLinks());
+
                     Console.Clear();
+                    goto MainMenu;
+
+                case '3': 
                     //y can use parallelThreads
                     basicIntervals.ParallelThreads(9);
                         //basicIntervals.Intervals(9);
-                    Console.Clear();
+                    
                     goto MainMenu;
-                case '3':
+                case '4':                    
                     //Console.Clear();
-                    //basicIntervals.GetReady();
-                    Console.Clear();
                     basicIntervals.Intervals(45);
-                    Console.Clear();
-                    goto MainMenu;
-                case '4':
-                    Console.Clear();
-                    Console.WriteLine("How much intervals do you whant to deal with? Tap a number and press ENTER key.");
-                    numberOfCycles = Convert.ToInt32(Console.ReadLine());
                     //Console.Clear();
-                    //basicIntervals.GetReady();
-                    Console.Clear();
-                    basicIntervals.Intervals(numberOfCycles);
-                    Console.Clear();
                     goto MainMenu;
                 case '5':
-                    Console.WriteLine();
-                    Console.WriteLine("CREDITS");
-                    Console.WriteLine();
-                    Console.WriteLine("Julietta Mąderek - concept & ideaa");
-                    Console.WriteLine("Jakub Puszynski - programing");
-                    Console.WriteLine();
-                    Console.WriteLine("Born from love & lack of coding");
-                    Console.WriteLine("version alfa 1.0");
-                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("How much intervals do you whant to deal with? Tap a number and press ENTER key.");
+                    _numberOfCycles = Convert.ToInt32(Console.ReadLine());                    
+                    Console.Clear();
+                    basicIntervals.Intervals(_numberOfCycles);
                     Console.Clear();
                     goto MainMenu;
                 case '6':
+                    Credits();
+                    goto MainMenu;
                 case '7':
+                case '8':
                     break;
                 default:
                     Console.Clear();
@@ -119,10 +102,23 @@ namespace JuliettApp
         }
 
 
-        
+
+        public static void Credits()
+        {
+            Console.WriteLine();
+            Console.WriteLine("CREDITS");
+            Console.WriteLine();
+            Console.WriteLine("Julietta Mąderek - concept & ideaa");
+            Console.WriteLine("Jakub Puszynski - programing");
+            Console.WriteLine();
+            Console.WriteLine("Born from love & lack of coding");
+            Console.WriteLine("version alfa 1.2");
+            Console.ReadKey();
+            Console.Clear();
+        }
 
 
-        public static void OpenWebsite(string URL)
+        public static void OpenWebSite(string URL)
         {
             //creating process 
             Process p1 = new Process();
@@ -166,13 +162,13 @@ namespace JuliettApp
         public string MusicLinks()
         {
             List<string> randomLinks = new List<string>();
-            randomLinks.Add("http://youtube.com/1");
-            randomLinks.Add("http://youtube.com/2");
-            randomLinks.Add("http://youtube.com/3");
-            randomLinks.Add("http://youtube.com/4");
-            randomLinks.Add("http://youtube.com/5");
-            randomLinks.Add("http://youtube.com/6");
-            randomLinks.Add("http://youtube.com/7");
+            randomLinks.Add("https://www.youtube.com/watch?v=yGiWGoIV-0Q&list=RDyGiWGoIV-0Q");
+            randomLinks.Add("https://www.youtube.com/watch?v=lt-udg9zQSE&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGAVMlt-udg9zQSE");
+            randomLinks.Add("https://www.youtube.com/watch?v=BZt7PPjpKuA");
+            randomLinks.Add("https://www.youtube.com/watch?v=2s3iGpDqQpQ");
+            randomLinks.Add("https://www.youtube.com/watch?v=JCDjP4JnpGU");
+            randomLinks.Add("https://www.youtube.com/watch?v=F8laMm-YyLY");
+            randomLinks.Add("https://www.youtube.com/results?search_query=ramstein");
 
             return randomLinks[_rand.Next(randomLinks.Count())];
         }
@@ -182,6 +178,7 @@ namespace JuliettApp
     //excercises methods
     class Exercises
     {
+        //method to count to three before intervals
         public void GetReady()
         {
             //counting down before cycles
@@ -216,7 +213,7 @@ namespace JuliettApp
 
             for (int i = 1; i <= x; i++)
             {
-
+                Console.Clear();
                 Console.WriteLine();
                 Console.WriteLine(" " + i + " interval of the 30 second cycle");
                 Console.WriteLine();
@@ -266,6 +263,7 @@ namespace JuliettApp
                 }
                 Console.WriteLine();
                 Console.WriteLine();
+                Console.Clear();
             }
         }
     }
